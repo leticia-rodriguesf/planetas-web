@@ -1,0 +1,339 @@
+
+/*Importando o Fonts Google*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,600;1,700&display=swap');
+
+
+/*Configurações Geral*/
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*Escondendo a barrinha*/
+    font-family: 'Open Sans', sans-serif;
+    list-style: none; /*Tirando o formato de lista*/
+    box-sizing: border-box; 
+    background: #000;
+}
+
+
+/*Configurações da NavBar*/
+nav{
+    position: fixed; /*Barra Fixa*/
+    z-index: 100; /*Sobreposição Geral*/
+    height: 8vh;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+nav .nav-links ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav .nav-links ul li{
+    padding: 0 4px;
+} 
+
+nav .nav-links ul li img{ /* Diminui a imagem para caber dentro da Navbar*/
+    transform: scale(0.45);
+}
+
+/*Seção Principal Inicio*/
+section{
+    height: 100vh;
+    overflow: hidden; /*Tira a barrinha*/
+}
+
+.bg img{
+    width: 110vw;
+    height: 110vh;
+    filter: brightness(0.6);
+}
+
+.rock1{
+    position: absolute !important;
+    left: 10vw !important;
+    top: 20vh !important;
+}
+
+.rock1 img{
+    width: 40%;
+    filter: brightness(0.5);
+}
+
+.text h1{
+    font-family: 'Wallpoet', cursive !important;
+    font-size: 5vw;
+    color: #fff;
+    letter-spacing: 20px;
+    position: absolute;
+    text-align: center;
+    top: 34vh;
+    left: 30vw;
+}
+
+.earth img{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 34vw;
+    top: 25vh;
+    z-index:1;
+    filter: brightness(0.7);
+}
+
+.mid{ /*Configuração da camada 2*/
+    left: -150px !important;
+    bottom: -100px !important;
+    top: unset !important;
+}
+
+.mid img{
+    width: 100%;
+    z-index: 2;
+    left: -20px;
+    top: 20vh !important;
+    filter: brightness(0.8);
+}
+
+.fore {
+    right: -50px !important;
+    bottom: -200px  !important;
+    top: 0px !important;
+    left: unset !important;
+}
+
+.fore img{
+    width: 400px;
+    height: 110vh;
+    z-index: 3; /*Camada 3*/
+    filter: brightness(0.5);
+}  
+
+/*Configurações da Seção 2*/
+#sectiontwo{
+    width: 100%;
+    height: 100vh;
+    position:relative;
+}
+
+.rockbg1{
+    position: absolute;
+    transform: scale(0.2);
+    filter: brightness(0.2);
+    top: 20vh;
+    left: 0;
+    z-index: 1;
+}
+
+.planet-links{
+    width: 95%;
+    height: 5vh;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.planet-links .swiper-pagination-bullet{
+    opacity: 0.2;
+    outline: none; 
+}
+
+.planet-links .swiper-pagination-active{
+    color: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: transparent;
+}
+
+.swiper-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.swiper-slide{
+    height: 400px !important;
+    width: 90% !important;
+    background: transparent;
+}
+
+/*Adicionando as fotos dos planetas*/
+
+.swiper-slide:nth-child(1) .slide-img{
+    background-image: url("/img/mercury.png") ;
+}
+
+.swiper-slide:nth-child(2) .slide-img{
+    background-image: url("/img/venus.png") ;
+}
+
+.swiper-slide:nth-child(3) .slide-img{
+    background-image: url("/img/earth1.png") ;
+}
+
+.swiper-slide:nth-child(4) .slide-img{
+    background-image: url("/img/mars.png") ;
+}
+
+.swiper-slide:nth-child(5) .slide-img{
+    background-image: url("/img/jupiter.png") ;
+}
+
+.swiper-slide:nth-child(6) .slide-img{
+    background-image: url("/img/saturn.png") ;
+}
+
+.swiper-slide:nth-child(7) .slide-img{
+    background-image: url("/img/uranus.png") ;
+}
+
+.swiper-slide:nth-child(8) .slide-img{
+    background-image: url("/img/neptune.png") ;
+}
+
+.slide-img{
+    background-position: "center";
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    width: 30%;
+    height: 100%;
+}
+
+.slide-number{
+    position: absolute;
+    top: -30px;
+    left: 30%;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.slide-number p{ /*Nome de cada planeta*/
+    font-size: 40px; 
+    font-family: 'Wallpoet', cursive;
+    color: white;
+    position: relative;
+}
+
+.slide-number{
+    position: absolute;
+}
+
+.slide-detail {
+    position: absolute;
+    top: 130px;
+    left: 30%;
+    z-index: 10;
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide-detail p{
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    opacity: 0.8;
+    line-height: 30px;    
+}
+
+.slide-detail p span{
+    position: absolute;
+}
+
+.slide-detail-facts{
+    position: absolute;
+    top: 240px;
+    left: 30%;
+    z-index: 10;
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    color: white;
+}
+
+.slide-detail-facts div{
+    display: flex;
+    position: relative;
+}
+
+.slide-detail-facts div h5{
+    margin-right: 20px;
+}
+
+.slide-text {
+    position: absolute;
+    top: -150px;
+    left: 22%;
+    z-index: 9;
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    opacity: 0.1 !important;
+  }
+  
+  .slide-text h4 {
+    color: #fff;
+    font-size: 100px;
+    position: relative;
+  }
+  .slide-text h4 span {
+    position: absolute;
+  }
+
+
+  @media (max-width: 600px){
+      .fore img{
+          visibility: hidden;
+      }
+      .slide-number{
+          font-size: 20px;
+      }
+      .slide-detail p{
+          font-size: 12px;
+      }
+      .slide-detail-facts{
+          visibility: hidden;
+      }
+      .planet-links .swiper-pagination-bullet{
+          font-size: 9px;
+      }
+  }
+  @media (max-width: 700px){
+      .fore img{
+          visibility: hidden;
+      }
+      .slide-number{
+          font-size: 40px;
+      }
+      .slide-detail p{
+          font-size: 30px;
+      }
+      .slide-detail-facts p{
+          font-size: 30px;
+      }
+      .planet-links .swiper-pagination-bullet{
+          font-size: 30px;
+      }
+  }
+  @media (max-width: 1024px){
+    .slide-detail-facts{
+        visibility: hidden;
+    }
+  }
